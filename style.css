@@ -64,6 +64,7 @@ body {
         background-color: var(--secundary-color);
         padding: 25px;
         box-sizing: border-box;
+        margin: 20px;
     }
     
     #treasures, #effort {

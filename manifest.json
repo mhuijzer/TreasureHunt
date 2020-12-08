@@ -15,12 +15,12 @@
         "purpose": "any maskable"
       }
     ],
-    "start_url": "/",
+    "start_url": "/TreasureHunt/",
     "background_color": "#ffffff",
     "display": "standalone",
     "orientation": "portrait",
-    "scope": "/",
-    "theme_color": "red",
+    "scope": "/TreasureHunt/",
+    "theme_color": "#EAD152",
     "prefer_related_applications": false
   
   }
