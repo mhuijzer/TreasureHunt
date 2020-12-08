@@ -1,0 +1,103 @@
+:root {
+    --primary-color: #EAD152;
+    --secundary-color: #8447ff;
+    --tertair-color: #8cffda;
+}
+body {
+    background-color: var(--primary-color);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Luckiest Guy';
+}
+#progressbar {
+    height: 20px;
+    width: 0%;
+    bottom: 0px;
+    left: 0;
+    position: absolute;
+    background-color: white;
+}
+#direction {
+    text-align: center;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+#hunt, #treasures, #treasure, #effort {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    height: 75%;
+    align-items: flex-end;
+    justify-content: center;
+    width: 90%;
+    background-color: var(--secundary-color);
+    color: white;
+    }
+    button {
+        background-color: var(--tertair-color);
+        color: var(--secundary-color);
+        border: none;
+        border-radius: 0px;
+        font-size: 25px;
+        font-family: 'Luckiest Guy', cursive;
+        padding: 15px 25px;
+        margin-bottom: 40px;
+    }
+    #textTreasure, #textDirections {
+        font-size: 40px;
+    }
+    #textTreasure {
+        width: 100%;
+        text-align: center;
+    }
+    button:hover, button:focus {
+        border: none;
+        outline: none;
+        box-shadow: -5px 5px white;
+        color: white;
+    }
+    .treasure {
+        width: 100%;
+        background-color: var(--secundary-color);
+        padding: 25px;
+        box-sizing: border-box;
+    }
+    
+    #treasures, #effort {
+        background-color: unset;
+    }
+    
+    input[type="number"],input[type="text"] {
+        width: 100%;
+        font-family: 'Luckiest Guy', cursive;
+        font-size: 25px;
+        color: white;
+        background: none;
+        border: none;
+    }
+    
+    input[type="number"]:focus,input[type="text"]:focus {
+        outline: none;
+    }
+    body.found {
+        background-color: white;
+    }
+    #credits {
+        background-color: var(--secundary-color);
+        padding: 25px;
+        color: white;
+        position: absolute;
+        top: -25%;
+    }
+    #found {
+        background-color: var(--primary-color);
+        padding: 25px 50px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
