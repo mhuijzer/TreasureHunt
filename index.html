@@ -60,6 +60,10 @@
         <div id="progressbar"></div>
         <script src="confetti.js"></script>
         <script src="hunt.js"></script>
-        <script src="serviceworker.js"></script>
+        <script>
+            if (navigator.serviceWorker) {
+                navigator.serviceWorker.register('serviceworker.js').then(function(registration) {}).catch(function(error) {});
+            }
+        </script>
     </body>
 </html>
