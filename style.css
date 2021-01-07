@@ -24,7 +24,13 @@ body {
     padding: 40px;
     box-sizing: border-box;
 }
-
+#refresh {
+    background: center center / contain no-repeat url('refresh.png');
+    width: 60px;
+    height: 60px;
+    margin-right: -75px;
+    margin-left: 10px;
+}
 #hunt, #treasures, #treasure, #effort {
     position: relative;
     display: flex;
@@ -58,6 +64,9 @@ body {
         outline: none;
         box-shadow: -5px 5px white;
         color: white;
+    }
+    #refresh:hover, #refresh:focus {
+        box-shadow: none;
     }
     .treasure {
         width: 100%;
@@ -101,4 +110,5 @@ body {
         justify-content: center;
         align-items: center;
         position: relative;
+        width: 50%;
     }

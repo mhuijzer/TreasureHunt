@@ -2,6 +2,7 @@ var effortBtn = document.getElementsByTagName('button')[0];
 var startBtn = document.getElementsByTagName('button')[1];
 var nextBtn = document.getElementsByTagName('button')[2];
 var foundBtn = document.getElementsByTagName('button')[3];
+var refreshBtn = document.getElementsByTagName('button')[4];
 var progressbar = document.getElementById('progressbar');
 var treasures = document.getElementById('treasures');
 var hunt = document.getElementById('hunt');
@@ -43,9 +44,12 @@ nextBtn.onclick = function(){
     if (givendirections == directionstogive){
         nextBtn.style.display = "none";
         foundBtn.style.display = "block";
-    }
-    
+    }  
 }
+refreshBtn.onclick = function(){
+    setdirections(true);
+}
+
 foundBtn.onclick = function(){
     hunt.style.display = "none";
     credit.innerHTML = "dit is voor " + creditDescr;
@@ -55,13 +59,14 @@ foundBtn.onclick = function(){
     confetti.start(5000);
 }
 
-compass = ['rechtdoor', 'linksaf', 'rechtsaf', 'terug'];
-count = ['eerste', 'tweede', 'derde', 'vierde', 'vijfde', 'zesde'];
-object = ['zijstraat', 'lantaarnpaal', 'huizenblok', 'auto', 'hekje', 'gebouw', 'fiets', 'voorbijganger']
-color = ['gele', 'groene', 'rode', 'zwarte', 'witte', 'blauwe'];
 
-function setdirections (){
+function setdirections (refresh = false){
 
+    compass = ['rechtdoor', 'linksaf', 'rechtsaf', 'terug'];
+    count = ['eerste', 'tweede', 'derde', 'vierde', 'vijfde', 'zesde'];
+    object = ['zijstraat', 'lantaarnpaal', 'huizenblok', 'auto', 'hekje', 'gebouw', 'fiets', 'voorbijganger']
+    color = ['gele', 'groene', 'rode', 'zwarte', 'witte', 'blauwe'];
+    
     directions = 'Ga ' + compass[Math.floor(Math.random()*4)] + ' na ';
     objects = object[Math.floor(Math.random()*8)];
 
@@ -73,6 +78,8 @@ function setdirections (){
         default: objects = 'de '+ count[Math.floor(Math.random()*6)] +' '+ objects;
     }
     textDirections.innerHTML = directions + objects;
-    givendirections++;
-    progressbar.style.width = givendirections/directionstogive*100 + '%';
+    if (refresh === false) {
+        givendirections++;
+        progressbar.style.width = givendirections/directionstogive*100 + '%';
+    }
 }
