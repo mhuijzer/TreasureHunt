@@ -5,7 +5,12 @@ var urlsToCache = [
     url + '/index.html',
     url + '/hunt.js',
     url + '/style.css',
-    url + '/treasure.js',
+    url + '/confetti.js',
+    url + '/icon-192.png',
+    url + '/icon-512.png',
+    url + '/icon.png',
+    url + '/refresh.png',
+    url + '/manifest.json',
 ];
 self.addEventListener('install', function(event) {
   event.waitUntil(
